@@ -8,25 +8,23 @@ import time
 внедрение VK-бота"
 session = 
 
-vk.Session('9197d4d5223bd3ec10fa9ba8f5593431d7dc42bca8b3a233972ef
-
-72f9204d8d13b5bef9cbbabea4c46019')
+vk.Session('9197d4d5223bd3ec10fa9ba8f5593431d7dc42bca8b3a233972ef72f9204d8d13b5bef9cbbabea4c46019')
 
 api = vk.API(session)
 
 while (True):
     try:
        
-        messages = api.messages.get()
+messages = api.messages.get()
     except:
         continue
    
-    for m in messages[1:]:
+for m in messages[1:]:
         
         if m['read_state'] == 0:
 
            
-            uid = m['uid']
+uid = m['uid']
 
            
             user_name = 
