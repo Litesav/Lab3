@@ -60,9 +60,7 @@ message=date_time +
   '\n>Developer: Lazchenko Vlad')
 
             if text == 'commands':
-                list_city = 'Список поддерживаемых городов: 
-
-Ростов-на-Дону, Каменск, Миллерово, Таганрог, Азов '
+                list_city = 'Список поддерживаемых городов: Ростов-на-Дону, Москва, Нью-Йорк, Лондон, Торонто'
                 api.messages.send(uid=uid, chat_id=chat_id, 
 
 message=date_time + '\n\nCommands:\n1. info\n2. commands'
@@ -76,7 +74,7 @@ message=date_time + '\n\nCommands:\n1. info\n2. commands'
 
   list_city)
           
-            if text == 'Привет':
+if text == 'Привет':
                 api.messages.send(uid=uid, chat_id=chat_id, 
 
 message=date_time + '\n\nЗдравствуй, ' + user_name +
@@ -94,4 +92,4 @@ message=str(date_time + '\n\n' +
             
             api.messages.markAsRead(message_ids=m['mid'])
   
-    time.sleep(3)
+time.sleep(3)
